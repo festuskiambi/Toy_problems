@@ -15,5 +15,12 @@
 
 
 def adds_up(array1, array2, array3)
-  #Your Code Here!
+  results = []
+  array1.each do |num1|
+  array2.each do |num2|
+  sum= num1+num2
+  results<<([num1,num2,sum]) if array3.include? (sum)
+  end
+ end
+results
 end
