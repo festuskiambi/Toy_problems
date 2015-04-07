@@ -18,7 +18,17 @@
 
 # gigasecond(1988, 5, 15) # ["2020-01-22", "Wednesday", "1764 days left"]
 # gigasecond(2015, 2, 17) # ["2046-10-26", "Friday", "11538 days left"]
-
+require "time"
 def gigasecond(year, month, day)
   #Your Code Here!
+birthday = Date.new(1990,3,28)
+gigaSecAnn = birthday + (10**9/60/60/24)
+result = []
+result.push gigaSecAnn.strftime("%Y,%m,%d")
+result.push gigaSecAnn.strftime("%A")
+
+daysLeft = gigaSecAnn.jd - DateTime.now.jd
+ 
+result.push "#{daysLeft} days left"
+
 end
