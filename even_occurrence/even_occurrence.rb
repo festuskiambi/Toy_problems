@@ -12,4 +12,12 @@
 
 def even_occurrence(num_array)
   # Your Code here!
+  mycount = 0
+  for i in  num_array
+  	mycount = num_array.count(i)
+  	if mycount % 2== 0
+  		return i
+  	end 
+  end
+  return nill
 end
